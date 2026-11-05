@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sr-Latn" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="google" content="notranslate">
+  <title>Uputstvo · SMS Izbori</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1E4C8F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="icons/icon-any.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="screen-container">
+    <header class="top-bar">
+      <div class="top-bar-nav">
+        <a class="btn-icon" href="./" aria-label="Nazad">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+          </svg>
+        </a>
+      </div>
+      <div class="top-bar-title">
+        <h1>Uputstvo</h1>
+      </div>
+      <div class="top-bar-actions"></div>
+    </header>
+
+    <main class="content-scroll guide">
+      <section class="guide-section">
+        <h2>Video: kako se šalje</h2>
+        <p>30 sekundi, bez zvuka. Isto je za svako javljanje.</p>
+        <div class="guide-video">
+          <video id="video" src="video/slanje.mp4" poster="video/slanje.jpg" width="720" height="1600"
+                 playsinline muted preload="none"
+                 aria-label="Video: upisuje se broj, dodiruje plavo dugme, u Porukama strelica za slanje, pa povratak u SMS Izbori i „Da, dodirnuta je“"></video>
+          <button type="button" class="guide-video-toggle" aria-label="Pusti video">
+            <span class="guide-video-play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="40" height="40"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/></svg>
+            </span>
+          </button>
+          <div class="guide-video-progress" aria-hidden="true"><div></div></div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <p>
+          <strong>„SMS Izbori“</strong> samo pripremi SMS za koordinatora. Ti upišeš traženi broj, a poruka se otvara
+          u drugoj aplikaciji, <strong>„Poruke“</strong>, spremna za slanje. Radi i bez interneta, dovoljan je signal.
+        </p>
+      </section>
+
+      <section class="guide-section guide-key">
+        <h2>Kako se šalje javljanje</h2>
+        <ol class="steps">
+          <li><div>Upiši broj i dodirni plavo dugme, na primer <strong>„Pripremi SMS: izlaznost do 10h“</strong>.</div></li>
+          <li><div>Otvore se <strong>„Poruke“</strong> sa gotovim tekstom. Poruka još nije poslata.</div></li>
+          <li><div><strong>Dodirni strelicu za slanje</strong>, desno od teksta. Tek tada poruka ode.</div></li>
+          <li>
+            <div>
+              Vrati se u <strong>„SMS Izbori“</strong>. Na pitanje <strong>„Da li je u Porukama dodirnuta strelica?“</strong>
+              dodirni <strong>„Da, dodirnuta je“</strong>.
+            </div>
+          </li>
+          <li><div>Zeleni znak <span class="mark-sent">✓</span> <strong>„Poslato u 10:15“</strong> znači: gotovo.</div></li>
+        </ol>
+        <p>Ako strelica nije dodirnuta, dodirni plavo <strong>„Nije — otvori Poruke ponovo“</strong> i dodirni je.</p>
+      </section>
+
+      <section class="guide-section">
+        <h2>Šta znače boje</h2>
+        <ul class="guide-list">
+          <li><span class="mark-todo">Plavo</span>: ovo je na redu. Ta kartica ima natpis <strong>„Sada“</strong>.</li>
+          <li><span class="mark-sent">✓ Zeleno</span>: poslato.</li>
+          <li>
+            <span class="mark-check">Crveno</span> <strong>„Proveri broj.“</strong>: broj izgleda neobično. Ispravi ga, a ako
+            je tačan, dodirni <strong>„Broj je tačan, pripremi SMS“</strong>.
+          </li>
+        </ul>
+      </section>
+
+      <section class="guide-section">
+        <h2>Na dan izbora</h2>
+        <ul class="guide-list">
+          <li><strong>„Pre otvaranja“</strong>, pre 7 sati: broj upisanih birača.</li>
+          <li><strong>„Izlaznost“</strong>: koliko je glasalo. Sat je već izabran, a možeš dodirnuti i drugi.</li>
+          <li>
+            <strong>„Glasanje van BM“</strong>: broj prijavljenih. Kad se komisija formira, dodirni
+            <strong>„Komisija je formirana“</strong>.
+          </li>
+          <li><strong>„Rezultati“</strong>, posle zatvaranja: glasovi za <strong>„MI“</strong> i <strong>„ONI“</strong>.</li>
+        </ul>
+      </section>
+
+      <section class="guide-section">
+        <h2>Ako nešto zapne</h2>
+        <ul class="guide-list">
+          <li>Poslat je pogrešan broj: pripremi i pošalji ga ponovo, sa tačnim brojem.</li>
+          <li>Nema signala: pošalji SMS ponovo kad se signal vrati.</li>
+          <li><strong>„Poruke“</strong> se ne otvaraju: dodirni <strong>„Odustani od slanja“</strong> i pozovi koordinatora.</li>
+          <li>Bilo šta drugo: pozovi koordinatora.</li>
+        </ul>
+        <div id="call-slot"></div>
+      </section>
+
+      <section class="guide-section">
+        <h2>Promena podataka</h2>
+        <p>
+          Zupčanik gore desno otvara <strong>„Podešavanje“</strong>. Dugme <strong>„Obriši sva javljanja“</strong> je
+          samo za brisanje probe. Na dan izbora ga ne diraj.
+        </p>
+      </section>
+
+      <a class="btn-primary" href="./">Nazad u aplikaciju</a>
+    </main>
+  </div>
+  <script>
+    const videos = [...document.querySelectorAll(".guide-video video")];
+    const players = new Map();
+    for (const video of videos) {
+      const box = video.parentElement;
+      const toggle = box.querySelector(".guide-video-toggle");
+      const bar = box.querySelector(".guide-video-progress > div");
+      const showState = () => {
+        const playing = !video.paused && !video.ended && !video.error;
+        box.classList.toggle("playing", playing);
+        toggle.setAttribute("aria-label", playing ? "Zaustavi video" : "Pusti video");
+      };
+      const play = () => {
+        if (video.error) video.load();
+        video.play().catch(showState);
+      };
+      players.set(video, play);
+      for (const name of ["play", "pause", "ended", "error"]) video.addEventListener(name, showState);
+      video.addEventListener("play", () => videos.forEach((other) => other !== video && other.pause()));
+      video.addEventListener("timeupdate", () => {
+        bar.style.width = (video.currentTime / video.duration) * 100 + "%";
+      });
+      toggle.addEventListener("click", () => (video.paused || video.ended ? play() : video.pause()));
+    }
+    if (location.hash === "#video") players.get(document.getElementById("video"))();
+    try {
+      let coordinatorNumber = localStorage.getItem("smsIzbori.profile_number");
+      if (!coordinatorNumber) {
+        const profile = JSON.parse(localStorage.getItem("sms_izbori.profile") || "null");
+        coordinatorNumber = profile?.coordinatorNumber;
+      }
+      if (coordinatorNumber) {
+        const call = document.createElement("a");
+        call.className = "btn-secondary";
+        call.href = "tel:" + coordinatorNumber;
+        call.textContent = "Pozovi koordinatora: " + coordinatorNumber;
+        document.getElementById("call-slot").append(call);
+      }
+    } catch {}
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="sr-Latn" translate="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="google" content="notranslate">
+  <title>SMS Izbori</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#1E4C8F" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-any.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>html, body { margin: 0; height: 100%; overflow: hidden; }</style>
+  <script src="sms-izbori.js"></script>
+  <script type="application/javascript" src="webApp.js"></script>
+</head>
+<body>
+  <div id="boot" style="position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem; font-family: system-ui, -apple-system, sans-serif; color: #49454f; background: #fff; z-index: 1000;">
+    <img src="icons/icon-any.svg" alt="" width="72" height="72" style="border-radius: 14px;">
+    <div style="font-size: 1rem; font-weight: 500;">Učitava se…</div>
+  </div>
+  <script>
+    if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+  </script>
+</body>
+</html>
